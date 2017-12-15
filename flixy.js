@@ -22,12 +22,12 @@ function adaptForSmartphone(isSmartphone)
         let forRow = fli == 'c to r';
         if(
             (forColumn && dir != 'column' && isSmartphone) ||
-            (forColumn && dir == 'column' && !isSmartphone)
+            (forRow && dir == 'row' && !isSmartphone)
         )
             smartElem.style.flexDirection = 'column';
         else if(
             (forRow && dir != 'row' && isSmartphone) ||
-            (forRow && dir == 'row' && !isSmartphone)
+            (forColumn && dir == 'column' && !isSmartphone)
         )
             smartElem.style.flexDirection = 'row';
     });
