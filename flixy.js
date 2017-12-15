@@ -9,7 +9,7 @@ Object.prototype.getFlixy = function(){
 // Functions
 function getFlixyElements()
 {
-    return document.querySelectorAll('data-flixy');
+    return document.querySelectorAll('[data-flixy]');
 }
 
 function adaptForSmartphone(isSmartphone)
@@ -46,5 +46,5 @@ function testResponsive()
 }
 
 // Events
-window.addEventListener('onresize', testResponsive);
+window.addEventListener('resize', testResponsive);
 testResponsive();
